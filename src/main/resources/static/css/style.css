@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+body {
+	font-family: "Helvetica Neue",
+		Arial,
+		"Hiragino Kaku Gothic ProN",
+		"Hiragino Sans",
+		Meiryo,
+		sans-serif;
+}
+
+.box {
+	background-color: rgb(230, 230, 230);
+	width: 50%;
+	border: solid rgb(153, 153, 153) 4px;
+	border-radius: 16px;
+	margin: 60px auto 0;
+	box-shadow: 0 4px 8px 0 rgb(148, 148, 148);
+}
+
+button {
+	padding: 4px;
+	background-color: white;
+	margin-top: 0px;
+}
+
+.boxContents {
+	text-align: center;
+}
+
+ol {
+	padding-left: 52px;
+	list-style-position: inside;
+}
+
+.list {
+	width: 240px;
+	text-align: left;
+	margin: 0 auto;
+}

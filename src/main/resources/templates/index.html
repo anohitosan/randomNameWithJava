@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+	<title>RandomNameGenerator</title>
+</head>
+
+<body>
+	
+	<div class="box">
+		<div class="boxContents">
+			<h2>名前を追加</h2>
+			<form name="nameForm" action="/randomNameWithJava/addName">
+				名字
+				<input type="text" size="10" name="familyName" required>
+				名前
+				<input type="text" size="10" name="firstName" required>
+				<button type="submit">追加</button>
+			</form>
+			<h2>最後に追加した名前を削除</h2>
+			<button onclick="location.href='/randomNameWithJava/deleteName'">名前を削除</button>
+			<h2>ランダムな順番で名前を出力する</h2>
+			<button onclick="location.href='/randomNameWithJava/shuffle'">&lt; 順番を生成する &gt;</button>
+			<div class="nameList">
+				<ol>
+					<li
+					th:each="name: ${member}"
+					th:text="${name.familyName} + ' ' + ${name.firstName}"
+					></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
